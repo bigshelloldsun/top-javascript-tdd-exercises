@@ -1,8 +1,8 @@
-const removeFromArray = function(array, ...item) {
-    item.forEach(x => {
-        array.forEach(i => {
-            if (i === x) {
-                array.splice(array.indexOf(i), 1);
+const removeFromArray = function(array, ...list) {
+    list.forEach(listItem => {
+        array.forEach(arrItem => {
+            if (arrItem === listItem) {
+                array.splice(array.indexOf(arrItem), 1);
                 return array;
             }
         });
