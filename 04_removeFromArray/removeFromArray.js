@@ -1,9 +1,14 @@
-const removeFromArray = function(array, item) {
-    for (i of array) {
-        if (i === item) {
-            return array.splice(i, i + 1);
-        }
-    }
+const removeFromArray = function(array, ...item) {
+    item.forEach(x => {
+        array.forEach(i => {
+            if (i === x) {
+                array.splice(array.indexOf(i), 1);
+                return array;
+            }
+        });
+        return array;
+    });
+    return array;
 };
 
 // Do not edit below this line
