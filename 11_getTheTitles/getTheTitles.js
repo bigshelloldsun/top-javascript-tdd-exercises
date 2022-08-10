@@ -1,8 +1,6 @@
 const getTheTitles = function(list) {
   let titles = [];
-  list.forEach(item => {
-    titles.push(item.title);
-  });
+  list.filter(item => titles.push(item.title));
   return titles;
 };
 
